@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: url('/images/dashboard-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading{
+width: 100vw;
+background-color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.logo{
+    width: 8rem;
+    height: 50%;
+    margin:0  2rem;
+}
+h2{
+    font-weight: bold;
+    color: black;
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+    /* background-color: #ebeef1; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    margin: 30px;
+    width: 350px;
+    background-color: #ebeef1;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    color: #00a037;
+    box-shadow: 10px 10px 10px -1px rgba(10, 99, 169, 0.16), -10px -10px 10px -1px rgba(255,255,255,0.70);
+    text-decoration: none;
+
+}
+
+.logout{
+    color: #ed0000;
+    box-shadow: inset 10px 10px 10px -1px rgba(10, 99, 169, 0.16), inset -10px -10px 10px -1px rgba(255,255,255,0.70);;
+}

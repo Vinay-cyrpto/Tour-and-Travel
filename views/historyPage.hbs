@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Order </title>
+    <link rel="stylesheet" href="/css/table.css">
+</head>
+<body> 
+    <div class="heading">
+        <img src="/images/logo.png" alt="" class="logo">
+        <h2>Welcome to Traveluru</h2>
+    </div>
+    
+     <div class="table table-part">
+
+    <table class="table table-hover content-table">
+        <thead>
+            <tr>
+
+                <th scope="col">Destination</th>
+                <th scope="col">Numbers</th>
+                <th scope="col">Start Date</th>
+                <th scope="col">End Date</th>
+                <th scope="col">Booking Number</th>
+                <th scope="col">Details</th>
+            </tr>
+</thead>
+<tbody id="tablebody">
+            {{#each data}}
+
+            <tr class="bg">
+                <td class="bld">{{this.Destination}}</td>
+                <td class="bld">{{this.Numbers}}</td>
+                <td class="bld">{{this.Start_date}}</td>
+                <td class="bld">{{this.End_date}}</td>
+                <td class="bld">{{this.Booking_num}}</td>
+                <td class="bld">{{this.Details}}</td>
+            </tr>
+
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
