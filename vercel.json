@@ -12,8 +12,16 @@
       "dest": "/app.js"
     },
     {
-      "src": "/(.*)\.(css|js|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot|otf|ico)$",
-      "dest": "/public/$1.$2"
+      "src": "/css/(.*)",
+      "dest": "/public/css/$1"
+    },
+    {
+      "src": "/js/(.*)",
+      "dest": "/public/js/$1"
+    },
+    {
+      "src": "/images/(.*)",
+      "dest": "/public/images/$1"
     }
   ]
 }
