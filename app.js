@@ -3,30 +3,37 @@ const app = express();
 const port = 3003;
 const pool = require('./models/pool');
 const body_parser = require('body-parser');
-const session = require('express-session')
+const session = require('express-session');
 const { checkLogin } = require('./models/checkLogin');
 const Swal = require('sweetalert2');
 const path = require('path');
 
-app.use(express.static('public'));
+// Serve static files (CSS, JS, images) from 'public' directory
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Set up view engine and views folder (for HBS templates)
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
 
+// Session setup
 app.use(session({
     secret: 'kake',
     resave: false,
     saveUninitialized: false
-}
-));
+}));
 
+// Body parser setup
 app.use(body_parser.urlencoded({
     extended: false
 }));
-app.use(body_parser.json())
+app.use(body_parser.json());
 
+// Route for the homepage
 app.get('/', (req, res) => {
     res.render('index', { errorVal: "" });
-})
+});
+
+
 
 
 
