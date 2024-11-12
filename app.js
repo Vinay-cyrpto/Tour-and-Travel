@@ -11,6 +11,7 @@ const Swal = require('sweetalert2');
 
 app.use(express.static('public'));
 app.set('view engine', 'hbs');
+app.set('views', path.join(__dirname, 'views'));
 
 app.use(session({
     secret: 'kake',
