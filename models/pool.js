@@ -1,11 +1,12 @@
 const mysql = require('mysql2');
 const pool = mysql.createConnection({
-    host: "14.139.230.119",
+    host: "junction.proxy.rlwy.net",
     user: "root",
-    password: "TC0cdQcwCWn5BNmI",
-    database: "examportal",
-    port: 31004
-})
+    password: "emhJcfJEbuFSKhgWysTsyAMpEBYbvsAe",
+    database: "railway",
+    port: 57387,
+    connectionLimit: 10,  // Adjust as needed
+});
 
 pool.connect((err) => {
     if (err)

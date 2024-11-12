@@ -6,8 +6,7 @@ const body_parser = require('body-parser');
 const session = require('express-session')
 const { checkLogin } = require('./models/checkLogin');
 const Swal = require('sweetalert2');
-
-
+const path = require('path');
 
 app.use(express.static('public'));
 app.set('view engine', 'hbs');
